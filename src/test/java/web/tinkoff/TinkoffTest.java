@@ -44,7 +44,7 @@ public class TinkoffTest {
     }
 
 
-    @After
+    @AfterClass
     public void tearDown() {
         driver.close();
         driver.quit();
