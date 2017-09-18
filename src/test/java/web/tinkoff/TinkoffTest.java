@@ -8,9 +8,14 @@ import static web.tinkoff.page.BasePage.driver;
 
 public class TinkoffTest {
 
+    @BeforeClass
+    public static void init()
+    {
+        BasePage.setUp();
+    }
+
     @Before
     public void setUp() {
-        BasePage.setUp();
         driver.get("https://www.tinkoff.ru");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
